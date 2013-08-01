@@ -1,0 +1,12 @@
+<label for="event_name">Event Name:</label>
+  <input id="event_name" type="text" name="event[name]" value="<%= @event.try(:name) %>">
+  <br>
+  <label for="event_location">Event Location:</label>
+  <input id="event_location" type="text" name="event[location]" value="<%= @event.try(:location) %>">
+  <br>
+  <label for="event_start_time">Event Start Time:</label>
+  <input id="event_start_time" type="datetime-local" name="event[starts_at]" value="<%= @event.try(:starts_at) %>">
+  <br>
+  <label for="event_end_time">Event End Time:</label>
+  <input id="event_end_time" type="datetime-local" name="event[ends_at]" value="<%= @event.try(:ends_at) %>">
+  <br>

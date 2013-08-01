@@ -1,0 +1,19 @@
+<h1><%= @event.name %> </h1>
+
+<%= @event.location %>
+<br>
+<%= @event.starts_at %>
+<br>
+<%= @event.ends_at %>
+<br>
+
+<form action='/event/<%= @event.id %>/delete' method='POST'> 
+  <input type="submit" value="Delete Event">
+</form>
+
+<form action='/event/<%= @event.id %>/edit' method='POST'>
+  <%= erb :_event_form_fields %>
+  <input type="submit" value="Edit event!">
+</form>
+
+
